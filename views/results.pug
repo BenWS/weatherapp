@@ -1,0 +1,21 @@
+doctype 5
+-var location = test2[0][4]
+-var zipcode = test2[0][5]
+html
+  head
+    style body {font-family:arial} p {font-size:15px} tr:nth-child(2n-1) {background-color:lightgray} 
+  body
+    h2(style="color:#003399") 48 Hour Weather Prediction for #{location} (#{zipcode})
+    table
+        tbody(align="center")
+            tr
+                td(style="padding:5px;") Time
+                td(style="padding:5px;") Precipitation
+                td(style="padding:5px;") Temperature
+                td(style="padding:5px;") Cloud Coverage
+            each val in test2
+                tr
+                    td(style="padding:5px;")=val[0]
+                    td(style="padding:5px;")=val[1]
+                    td(style="padding:5px;")=val[2]
+                    td(style="padding:5px;")=val[3]

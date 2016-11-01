@@ -1,0 +1,12 @@
+doctype 5
+html
+  head
+    style body {font-family:arial} p {font-size:15px}
+  body
+    h2(style="color:#003399") Weather Forecaster
+    p Provide Zip Code to obtain weather forecast for the area
+    form(action = "/weather" method="get")
+      input(type="textfield" name="zipcode")
+      br
+      br
+      input(type="submit")
