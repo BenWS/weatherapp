@@ -1,4 +1,0 @@
-10-29-16: Improvements 
-Allow user to choose between short term, medium term, and long term forecast. 
-Provide map with weather forecast.
-Add error handling to application for non-existent zipcodes, empty weather queries.

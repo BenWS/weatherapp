@@ -1,0 +1,13 @@
+doctype 5
+-var temp = test2[0]
+-var wx_phrase = test2[1]
+-var location = test2[2]
+-var zipcode = test2[3]
+
+
+html
+  head
+    style body {font-family:arial} p {font-size:15px} tr:nth-child(2n-1) {background-color:lightgray} 
+  body
+    h2(style="color:#003399") Current Observations for #{location} (#{zipcode})
+    p The Current Weather is #{wx_phrase} with a Temperature of #{temp}.

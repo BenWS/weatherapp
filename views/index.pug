@@ -4,9 +4,15 @@ html
     style body {font-family:arial} p {font-size:15px}
   body
     h2(style="color:#003399") Weather Forecaster
-    p Provide Zip Code to obtain weather forecast for the area
+    p Provide Zip Code to obtain weather forecast for the area:
     form(action = "/weather" method="get")
       input(type="textfield" name="zipcode")
+      br
+      p Choose forecast type:
+      select(name="forecast")
+        option(value="Current") Current
+        option(value="48 Hour") 48 Hour
+        option(value="5 Day") 5 Day
       br
       br
       input(type="submit")
