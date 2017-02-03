@@ -13,7 +13,7 @@ app.get("/index", function(req,res) {
 
 app.get('/weather', function(request, response) {
         
-     var locationByZip = "https://6f6a2062-8b6e-4999-85a6-58561fc2c2ae:HtVPKi1rQS@twcservice.mybluemix.net"
+     var locationByZip = "https://89d91b09-3fed-46d2-a935-d6743afe638f:SRkkeyaCc6@twcservice.mybluemix.net"
                     + ":443/api/weather/v3/location/point?postalKey=" + request.query.zipcode + "%3AUS&language=en-US"
     
         var latitude;
@@ -39,7 +39,7 @@ app.get('/weather', function(request, response) {
         
         if (request.query.forecast === '48 Hour') {
         
-            var forecastCoord = "https://6f6a2062-8b6e-4999-85a6-58561fc2c2ae:HtVPKi1rQS@twcservice.mybluemix.net"
+            var forecastCoord = "https://89d91b09-3fed-46d2-a935-d6743afe638f:SRkkeyaCc6@twcservice.mybluemix.net"
                             + ":443/api/weather/v1/geocode/" + latitude + "/" + longitude + "/forecast/hourly/48hour.json"
     
             httpRequest(forecastCoord, 
@@ -86,7 +86,7 @@ app.get('/weather', function(request, response) {
                 longitude = JSON.parse(body)["location"]["longitude"];
                 
                 //now make HTTP request to get the 5 day forecast
-                var currentForecast = "https://6f6a2062-8b6e-4999-85a6-58561fc2c2ae:HtVPKi1rQS@twcservice.mybluemix.net"
+                var currentForecast = "https://89d91b09-3fed-46d2-a935-d6743afe638f:SRkkeyaCc6@twcservice.mybluemix.net"
                             + ":443/api/weather/v1/geocode/" + latitude + "/" + longitude + "/observations.json"
                             
                 var clds;
@@ -120,7 +120,7 @@ app.get('/weather', function(request, response) {
                 console.log(longitude);
                 
                 //now make HTTP request to get the 5 day forecast
-                var fiveDayForecast = "https://6f6a2062-8b6e-4999-85a6-58561fc2c2ae:HtVPKi1rQS@twcservice.mybluemix.net"
+                var fiveDayForecast = "https://89d91b09-3fed-46d2-a935-d6743afe638f:SRkkeyaCc6@twcservice.mybluemix.net"
                             + ":443/api/weather/v1/geocode/" + latitude + "/" + longitude + "/forecast/daily/5day.json"
                 
                 httpRequest(fiveDayForecast, (error, httpResponse, body) => {
@@ -195,4 +195,4 @@ app.get("/*", function(req,res) {
   res.redirect("/index");
 });
 
-app.listen(process.env.PORT);
+app.listen(8080);
