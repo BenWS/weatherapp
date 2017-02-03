@@ -1,0 +1,25 @@
+{
+  "name": "weatherapplication",
+  "version": "1.0.0",
+  "description": "Simple Weather Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benws/weatherapplication.git"
+  },
+  "author": "Ben Shippey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benws/weatherapplication/issues"
+  },
+  "homepage": "https://github.com/benws/weatherapplication#readme",
+  "dependencies": {
+    "dateformat": "^2.0.0",
+    "express": "^4.14.1",
+    "request": "^2.79.0"
+  }
+}
