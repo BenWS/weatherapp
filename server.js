@@ -195,4 +195,4 @@ app.get("/*", function(req,res) {
   res.redirect("/index");
 });
 
-app.listen(process.env);
+app.listen(process.env.PORT);
